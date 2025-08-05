@@ -11,4 +11,4 @@ Route::get('/proximity-form', [ProximityAlertController::class, 'showForm'])->na
 
 Route::post('/check-proximity', [ProximityAlertController::class, 'checkProximity'])->name('check.proximity');
 
-
+Route::get('/logs', [ProximityAlertController::class, 'showLogs'])->name('logs');

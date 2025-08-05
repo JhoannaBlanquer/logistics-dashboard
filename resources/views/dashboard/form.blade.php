@@ -16,13 +16,21 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full top-0 left-0 z-50 px-6 py-4 bg-black/30 backdrop-blur-lg shadow-lg flex items-center justify-between">
+        <!-- Logo & Title -->
         <div class="flex items-center gap-3">
             <i data-lucide="map-pin" class="w-6 h-6 text-[#1A00E2]"></i>
             <span class="font-bold text-white text-lg">Proximity Alert</span>
         </div>
-        <a href="{{ route('home') }}" class="text-[#1A00E2] hover:underline font-semibold">
-            Home
-        </a>
+
+        <!-- Navigation Links -->
+        <div class="flex items-center gap-6">
+            <a href="{{ route('home') }}" class="text-[#1A00E2] hover:underline font-semibold">
+                Home
+            </a>
+            <a href="{{ route('logs') }}" class="text-[#1A00E2] hover:underline font-semibold">
+                Logs
+            </a>
+        </div>
     </nav>
 
     <!-- Header -->
@@ -52,14 +60,15 @@
                 </div>
 
                 <div>
-                    <label for="radius" class="block text-gray-200 font-semibold mb-1">Alert Radius</label>
+                <label for="radius" class="block text-gray-200 font-semibold mb-1">Alert Radius</label>
                     <select name="radius" id="radius"
-                            class="w-full px-4 py-2 rounded-lg bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-[#1A00E2]">
-                        <option value="100">100m</option>
-                        <option value="250" selected>250m</option>
-                        <option value="500">500m</option>
+                        class="w-full px-4 py-2 rounded-lg bg-white/10 text-white placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1A00E2]">
+                        <option class="text-black" value="100">100m</option>
+                        <option class="text-black" value="250" selected>250m</option>
+                        <option class="text-black" value="500">500m</option>
                     </select>
                 </div>
+
 
                 <div class="pt-4">
                     <button type="submit"
